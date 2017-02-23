@@ -10,13 +10,13 @@ import UIKit
 
 class ColorsTableVC: UITableViewController {
 
-    let colors = ["red","green","blue","brown","purple"]
+    var colors = ["red","green","blue","brown","purple"]
     
     override func viewDidLoad() {
         
         print(#function + " called ")
         
-        self.title = "Colors"
+//        self.title = "Colors"
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -35,6 +35,9 @@ class ColorsTableVC: UITableViewController {
     }
 
     // MARK: - Table view data source
+    @IBAction func cancelTapped(sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
