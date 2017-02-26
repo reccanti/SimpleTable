@@ -79,6 +79,16 @@ class ColorsTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedColor = colors[indexPath.row].value
+        
+        if isPad{
+            let nc = NotificationCenter.default
+            
+            // create a dictionary for the data
+            let data = ["color": selectedColor]
+            
+            // broacast the notification
+            nc.post(name: myColorChangedNotification, object: self, userInfo: data)
+        }
         print(selectedColor)
     }
     /*
