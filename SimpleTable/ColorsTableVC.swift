@@ -10,11 +10,16 @@ import UIKit
 
 class ColorsTableVC: UITableViewController {
 
-    var colors = ["red","green","blue","brown","purple"]
+    var colors: [(name: String, value: UIColor)] = []
+    var selectedColor = UIColor.red
     
     override func viewDidLoad() {
         
         print(#function + " called ")
+        
+        colors.append((name:"Red", value:UIColor.red))
+        colors.append(contentsOf: [(name:"Green",value:UIColor.green)])
+        colors += [(name:"Blue",value:UIColor.blue)]
         
 //        self.title = "Colors"
         super.viewDidLoad()
@@ -59,13 +64,24 @@ class ColorsTableVC: UITableViewController {
         
         print(#function + " called with indexPath = \(indexPath), the data for this row is = \(colors[indexPath.row])")
         
+        // get the current tuple
+        let t = colors[indexPath.row]
+        
+        // get the tuple's name
+        let name = t.name
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = colors[indexPath.row]
+        cell.textLabel?.text = name
         return cell
     }
 
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedColor = colors[indexPath.row].value
+        print(selectedColor)
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -110,5 +126,11 @@ class ColorsTableVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DoneTapped"{
+            print("in prepareForSegue in the ColorsTableVC")
+        }
+    }
 
 }

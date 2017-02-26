@@ -27,6 +27,15 @@ class ViewController: UIViewController {
             colorsVC.title = "Choose a color"
         }
     }
+    
+    // MARK: - Storyboard Actions -
+    @IBAction func unwindToMain(segue:UIStoryboardSegue) {
+        if segue.identifier == "DoneTapped"{
+            let colorVC = segue.source as! ColorsTableVC
+            let color = colorVC.selectedColor
+            self.view.backgroundColor = color
+        }
+    }
 
 }
 
