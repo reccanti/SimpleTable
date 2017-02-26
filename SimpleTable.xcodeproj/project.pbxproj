@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73537BD1E627E3000E77E9D /* BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73537BC1E627E3000E77E9D /* BackgroundColor.swift */; };
 		B7EA2A8C1E5C9E6A00A6E198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EA2A8B1E5C9E6A00A6E198 /* AppDelegate.swift */; };
 		B7EA2A8E1E5C9E6A00A6E198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7EA2A8D1E5C9E6A00A6E198 /* ViewController.swift */; };
 		B7EA2A911E5C9E6A00A6E198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7EA2A8F1E5C9E6A00A6E198 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B73537BC1E627E3000E77E9D /* BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColor.swift; sourceTree = "<group>"; };
 		B7EA2A881E5C9E6A00A6E198 /* SimpleTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7EA2A8B1E5C9E6A00A6E198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7EA2A8D1E5C9E6A00A6E198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B73537BE1E62802A00E77E9D /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				B7EA2A8D1E5C9E6A00A6E198 /* ViewController.swift */,
+				B7EA2A9D1E5CA03C00A6E198 /* ColorsTableVC.swift */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		B73537BF1E62807A00E77E9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B73537BC1E627E3000E77E9D /* BackgroundColor.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B7EA2A7F1E5C9E6900A6E198 = {
 			isa = PBXGroup;
 			children = (
@@ -57,9 +76,9 @@
 			isa = PBXGroup;
 			children = (
 				B7EA2A8B1E5C9E6A00A6E198 /* AppDelegate.swift */,
-				B7EA2A8D1E5C9E6A00A6E198 /* ViewController.swift */,
+				B73537BE1E62802A00E77E9D /* VC */,
+				B73537BF1E62807A00E77E9D /* Model */,
 				B7EA2A8F1E5C9E6A00A6E198 /* Main.storyboard */,
-				B7EA2A9D1E5CA03C00A6E198 /* ColorsTableVC.swift */,
 				B7EA2A921E5C9E6A00A6E198 /* Assets.xcassets */,
 				B7EA2A941E5C9E6A00A6E198 /* LaunchScreen.storyboard */,
 				B7EA2A971E5C9E6A00A6E198 /* Info.plist */,
@@ -143,6 +162,7 @@
 				B7EA2A9E1E5CA03C00A6E198 /* ColorsTableVC.swift in Sources */,
 				B7EA2A8E1E5C9E6A00A6E198 /* ViewController.swift in Sources */,
 				B7EA2A8C1E5C9E6A00A6E198 /* AppDelegate.swift in Sources */,
+				B73537BD1E627E3000E77E9D /* BackgroundColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +326,7 @@
 				B7EA2A9C1E5C9E6A00A6E198 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

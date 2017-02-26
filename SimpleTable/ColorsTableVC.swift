@@ -10,18 +10,17 @@ import UIKit
 
 class ColorsTableVC: UITableViewController {
 
-    var colors: [(name: String, value: UIColor)] = []
+    var colors = [BackgroundColor]()
     var selectedColor = UIColor.red
     
     override func viewDidLoad() {
         
         print(#function + " called ")
         
-        colors.append((name:"Red", value:UIColor.red))
-        colors.append(contentsOf: [(name:"Green",value:UIColor.green)])
-        colors += [(name:"Blue",value:UIColor.blue)]
+        colors.append(BackgroundColor(name:"Red", value:UIColor.red))
+        colors.append(contentsOf: [BackgroundColor(name:"Green",value:UIColor.green)])
+        colors += [BackgroundColor(name:"Blue",value:UIColor.blue)]
         
-//        self.title = "Colors"
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
